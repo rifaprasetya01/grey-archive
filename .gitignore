@@ -1,42 +1,75 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==========================================
+# Dependensi & Package Manager
+# ==========================================
+node_modules/
+.pnpm-store/
+.yarn/
+jspm_packages/
+web_modules/
 
-# dependencies
-/frontend/node_modules
-/frontend/.pnp
-/frontend/frontend.pnp.*
-/frontend/.yarn/*
-/frontend/!.yarn/patches
-/frontend/!.yarn/plugins
-/frontend/!.yarn/releases
-/frontend/!.yarn/versions
+# ==========================================
+# Hasil Build & Output Kompilasi
+# ==========================================
+# Next.js build output
+.next/
+out/
 
-# testing
-/frontend/coverage
+# Node.js / Backend build output (jika pakai TypeScript/Bundler di backend)
+dist/
+build/
+lib/
 
-# next.js
-/frontend/.next/
-/frontend/out/
+# Tailwind CSS v4 / PostCSS artifacts (jika ada custom build)
+.cache/
 
-# production
-/frontend/build
+# ==========================================
+# Logs & Debugging
+# ==========================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# misc
-/frontend/.DS_Store
-/frontend/*.pem
+# ==========================================
+# Variabel Lingkungan (SANGAT PENTING/RAHASIA)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.local
 
-# debug
-/frontend/npm-debug.log*
-/frontend/yarn-debug.log*
-/frontend/yarn-error.log*
-/frontend/.pnpm-debug.log*
+# ==========================================
+# Sistem Operasi & IDE (Sistem Spesifik)
+# ==========================================
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# env files (can opt-in for committing if needed)
-/frontend/.env*
+# Editors (VS Code, WebStorm, dll)
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# vercel
-/frontend/.vercel
-
-# typescript
-/frontend/*.tsbuildinfo
-/frontend/next-env.d.ts
-/frontend/
+# ==========================================
+# Diagnostik & Testing
+# ==========================================
+.npm
+.eslintcache
+.stylelintcache
+coverage/
+.nyc_output
+.jest/
